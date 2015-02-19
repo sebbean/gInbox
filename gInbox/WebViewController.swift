@@ -93,7 +93,7 @@ class WebViewController: NSViewController, WKNavigationDelegate {
             windowScriptObject.setValue(self, forKey: "gInbox")
             windowScriptObject.evaluateWebScript("console = { log: function(msg) { gInbox.consoleLog(msg); } }")
             
-            let path = NSBundle.mainBundle().pathForResource("gInboxTweaks", ofType: "js", inDirectory: "Assets")
+            let path = NSBundle.mainBundle().pathForResource("gInboxTweaks", ofType: "js")
             let jsString = String(contentsOfFile: path!, encoding: NSUTF8StringEncoding, error: nil)
             let script = document.createElement("script")
             let jsText = document.createTextNode(jsString)
