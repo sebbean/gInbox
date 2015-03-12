@@ -14,7 +14,11 @@ import AppKit
 class AppDelegate : NSObject, NSApplicationDelegate {
     
     @IBOutlet var window: NSWindow!
-    
+
+    func applicationDidFinishLaunching(notification: NSNotification) {
+        self.window.collectionBehavior = NSWindowCollectionBehavior.FullScreenPrimary
+    }
+
     func applicationShouldHandleReopen(sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
         if flag {
             window.orderFront(self)
@@ -23,7 +27,4 @@ class AppDelegate : NSObject, NSApplicationDelegate {
         }
         return true
     }
-    
-    
-    
 }
