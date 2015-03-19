@@ -25,3 +25,14 @@ How to Install
 1. Download the latest version via the [releases](https://github.com/chenasraf/gInbox/releases) page
 1. Drag & Drop into your `/Applications` folder
 1. Launch!
+2. 
+
+License
+=======
+Licensed under [Apache License 2.0 (Apache-2.0)](https://tldrlegal.com/license/apache-license-2.0-(apache-2.0))
+
+Contributing
+============
+Feel free to create pull requests to this repository if you want changes uploaded to the origin. I will check PRs one by one and decide if they should be implemented.
+
+If you want to redistribute, please rename the app to a new name so no confusion is caused. Also do not affiliate directly with this repository (you may specify you have forked this, but unless I pull your changes, this repository does not endorse or claim any kind of approval or link to the fork).
