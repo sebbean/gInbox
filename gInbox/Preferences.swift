@@ -17,10 +17,10 @@ class Preferences {
     class func clearDefaults() -> Void {
         let path                = NSBundle.mainBundle().pathForResource("Defaults", ofType: "plist")!
         let dic                 = NSDictionary(contentsOfFile: path)!
-        let productIdentifier   = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleIdentifier") as String
+        let productIdentifier   = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleIdentifier") as! String
         
         getDefaults().removePersistentDomainForName(productIdentifier)
-        getDefaults().registerDefaults(dic)
+        getDefaults().registerDefaults(dic as [NSObject : AnyObject])
     }
     
     class func getInt(key: String) -> Int? {

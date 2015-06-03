@@ -40,7 +40,7 @@ class WebViewController: NSViewController, WKNavigationDelegate {
     func webView(sender: WKWebView,
         decidePolicyForNavigationAction navigationAction: WKNavigationAction, decisionHandler: (WKNavigationActionPolicy) -> Void) {
             if sender == webView {
-                NSWorkspace.sharedWorkspace().openURL(navigationAction.request.URL)
+                NSWorkspace.sharedWorkspace().openURL(navigationAction.request.URL!)
             }
     }
     
@@ -63,7 +63,7 @@ class WebViewController: NSViewController, WKNavigationDelegate {
     }
     
     override func webView(webView: WebView!, decidePolicyForNewWindowAction actionInformation: [NSObject : AnyObject]!, request: NSURLRequest!, newFrameName frameName: String!, decisionListener listener: WebPolicyDecisionListener!) {
-        if (request.URL.absoluteString!.hasPrefix("https://accounts.google.com") == false) {
+        if (request.URL!.absoluteString!.hasPrefix("https://accounts.google.com") == false) {
             NSWorkspace.sharedWorkspace().openURL(NSURL(string: (actionInformation["WebActionOriginalURLKey"]?.absoluteString)!)!)
             listener.ignore()
         } else {
@@ -112,7 +112,7 @@ class WebViewController: NSViewController, WKNavigationDelegate {
     
     override func webView(sender: WebView!, resource identifier: AnyObject!, willSendRequest request: NSURLRequest!, redirectResponse: NSURLResponse!, fromDataSource dataSource: WebDataSource!) -> NSURLRequest! {
         
-        return NSMutableURLRequest(URL: request.URL, cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData, timeoutInterval: request.timeoutInterval)
+        return NSMutableURLRequest(URL: request.URL!, cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData, timeoutInterval: request.timeoutInterval)
     }
     
     func isSelectorExcludedFromWebScript(selector: Selector) -> Bool {
