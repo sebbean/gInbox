@@ -51,7 +51,7 @@
 /* Begin PBXFileReference section */
 		1112A9351A1CF41400E4F882 /* Defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Defaults.plist; sourceTree = "<group>"; };
 		114C2EED1A0FF1DA00BE97FB /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		1165850B1A0A523F005D5596 /* Inbox by Gmail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inbox by Gmail.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1165850B1A0A523F005D5596 /* gInbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gInbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1165850F1A0A523F005D5596 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		116585151A0A523F005D5596 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		1165851E1A0A523F005D5596 /* gInboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gInboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,7 +103,7 @@
 		1165850C1A0A523F005D5596 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1165850B1A0A523F005D5596 /* Inbox by Gmail.app */,
+				1165850B1A0A523F005D5596 /* gInbox.app */,
 				1165851E1A0A523F005D5596 /* gInboxTests.xctest */,
 			);
 			name = Products;
@@ -195,7 +195,7 @@
 			);
 			name = gInbox;
 			productName = gInbox;
-			productReference = 1165850B1A0A523F005D5596 /* Inbox by Gmail.app */;
+			productReference = 1165850B1A0A523F005D5596 /* gInbox.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1165851D1A0A523F005D5596 /* gInboxTests */ = {
@@ -399,7 +399,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
-				PRODUCT_NAME = "Inbox by Gmail";
+				PRODUCT_NAME = gInbox;
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -421,7 +421,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				OTHER_LDFLAGS = "-Wl,-rpath,@loader_path/../Frameworks";
-				PRODUCT_NAME = "Inbox by Gmail";
+				PRODUCT_NAME = gInbox;
 				SDKROOT = macosx;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
