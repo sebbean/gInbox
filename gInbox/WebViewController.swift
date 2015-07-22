@@ -63,7 +63,7 @@ class WebViewController: NSViewController, WKNavigationDelegate {
     }
     
     override func webView(webView: WebView!, decidePolicyForNewWindowAction actionInformation: [NSObject : AnyObject]!, request: NSURLRequest!, newFrameName frameName: String!, decisionListener listener: WebPolicyDecisionListener!) {
-        if (request.URL!.absoluteString!.hasPrefix("https://accounts.google.com") == false) {
+        if (request.URL!.absoluteString!.hasPrefix("https://accounts.google.com") == false && request.URL!.absoluteString!.hasPrefix("https://inbox.google.com") == false) {
             NSWorkspace.sharedWorkspace().openURL(NSURL(string: (actionInformation["WebActionOriginalURLKey"]?.absoluteString)!)!)
             listener.ignore()
         } else {
